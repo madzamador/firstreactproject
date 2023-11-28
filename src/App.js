@@ -1,21 +1,11 @@
 import './App.css';
 
 function App() {
-
-  const name = <h1> Alfredo </h1>
-  const age = <h1> 21 </h1>
-  const email = <h1> Alfredo@ymail.com </h1>
-  const user = (<div>
-        {name}
-        {age}
-        {email}
-  </div>)
-
   return (
     <div className="App">
-      {user}
-      {user}
-      {user}
+      <Job salary={100000} position="Senior SDE" company="Facebook" />
+      <Job salary={90000} position="Junior SDE" company="Google" />
+      <Job salary={80000} position="Project Manager" company="Amazon" />
     </div>
   );
 }
