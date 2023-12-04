@@ -1,12 +1,23 @@
 import './App.css';
+import { useState } from "react";
 
 function App() {
+  const [inputValue, setInputValue] = useState("");
+  const handleInputChange = (event) => {
+    console.log(event.target.value);
+    setInputValue(event.target.value);
+  };
   return (
-    <div className="App">
-      <h1 className="name"> Alfredo </h1>
-      <h1 className="title-1">Information Systems</h1>
+    <div className='App'>
+      <div className='inpt'>
+        <input type="text" onChange={handleInputChange} />
+      </div>
+      <div className='mirror'>
+        {inputValue}
+      </div>
+      
     </div>
   );
 }
-
+  
 export default App;
