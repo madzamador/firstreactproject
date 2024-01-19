@@ -1,23 +1,24 @@
 import './App.css';
-import { useState } from "react";
+import { User } from './User';
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
-  const handleInputChange = (event) => {
-    console.log(event.target.value);
-    setInputValue(event.target.value);
-  };
-  return (
-    <div className='App'>
-      <div className='inpt'>
-        <input type="text" onChange={handleInputChange} />
-      </div>
-      <div className='mirror'>
-        {inputValue}
-      </div>
-      
-    </div>
-  );
-}
+  const planets = [
+    { planetName: "Earth", isRockPlanet: true },
+    { planetName: "Mars", isRockPlanet: true },
+    { planetName: "Venus", isRockPlanet: true },
+    { planetName: "Jupiter", isRockPlanet: false },
+    { planetName: "Neptune", isRockPlanet: false },
+    { planetName: "Uranus", isRockPlanet: false },
+    { planetName: "Mercury", isRockPlanet: true },
+  ];
   
+  return <div className='App'>
+    {users.map((user, key) => {
+      return <User name={user.name} age={user.age} />
+    })}
+  </div>
+}
+
+
+
 export default App;
